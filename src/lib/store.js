@@ -12,10 +12,10 @@ const TasksSlice = createSlice({
   initialState: defaultTasks,
   reducers: {
     updateTaskState: (state, action) => {
-      const { id, newTaskSate } = action.payload;
+      const { id, newTaskState } = action.payload;
       const task = state.findIndex((task) => task.id === id);
       if (task >= 0) {
-        state[task].state = newTaskSate;
+        state[task].state = newTaskState;
       }
     },
   },
